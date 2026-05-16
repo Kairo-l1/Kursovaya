@@ -17,7 +17,7 @@
 ```
 c:\kursach\
 ├── app.py              # Основное приложение
-├── best.pt             # Веса модели YOLOv8n (~6 МБ)
+├── best.pt             # Веса модели YOLOv8s
 ├── requirements.txt    # Зависимости
 ├── data.yaml           # Конфиг датасета (для справки)
 └── README.md           # Этот файл
@@ -34,7 +34,7 @@ c:\kursach\
 
 1. **Клонируйте репозиторий:**
 ```bash
-git clone https://github.com/USERNAME/REPO.git
+git clone (https://github.com/Kairo-l1/Kursovaya.git
 cd REPO
 ```
 
@@ -64,28 +64,6 @@ python app.py
 
 Откройте в браузере: **http://127.0.0.1:7861**
 
-## Загрузка на GitHub
-
-1. **Инициализируйте Git (если еще не сделали):**
-```bash
-git init
-```
-
-2. **Добавьте и закоммитьте файлы:**
-```bash
-git add .
-git commit -m "Initial commit: road defect detection app with YOLOv8"
-```
-
-3. **Создайте репозиторий на GitHub** (https://github.com/new)
-
-4. **Добавьте удалённый origin и запушьте:**
-```bash
-git remote add origin https://github.com/USERNAME/REPO.git
-git branch -M main
-git push -u origin main
-```
-
 ## Классы дефектов (из data.yaml)
 
 | Индекс | Класс | Описание |
@@ -95,17 +73,6 @@ git push -u origin main
 | 2 | alligator_crack | Сетка (аллигаторова) трещин |
 | 3 | other_corruption | Прочие повреждения |
 | 4 | pothole | Выбоина |
-
-## Файл .gitignore
-
-Репозиторий включает файл `.gitignore`, который исключает:
-- Результаты тренировки (`runs/`, `eval_results/`, `debug_output/`)
-- Виртуальное окружение (`.venv/`)
-- IDE конфигурацию (`.idea/`, `.vscode/`)
-- Кэш Python (`__pycache__/`)
-- Временные файлы и логи
-
-**Модель `best.pt` (~6 МБ) включена в репозиторий,** так как это необходимо для работы приложения после клонирования.
 
 ## Лицензия
 
