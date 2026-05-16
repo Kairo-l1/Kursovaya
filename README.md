@@ -35,7 +35,6 @@ c:\kursach\
 1. **Клонируйте репозиторий:**
 ```bash
 git clone (https://github.com/Kairo-l1/Kursovaya.git
-cd REPO
 ```
 
 2. **Создайте виртуальное окружение:**
