@@ -1,4 +1,3 @@
-# Приложение для детекции дорожных дефектов на основе YOLOv8
 import gradio as gr
 import cv2
 import numpy as np
@@ -307,12 +306,6 @@ def create_interface():
                 interactive=False,
                 max_lines=20
             )
-        
-        # ===== ПРИМЕРЫ ИЗОБРАЖЕНИЙ (PLACEHOLDER) =====
-        gr.Markdown("""
-        ## 📷 Примеры использования
-        *В этом разделе могут быть размещены примеры изображений с предварительными результатами детекции*
-        """)
         
         # ===== ПРИВЯЗКА КНОПКИ К ФУНКЦИИ =====
         run_button.click(
