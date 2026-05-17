@@ -1,4 +1,3 @@
-# train.py — RDD2022, YOLOv8s
 from ultralytics import YOLO
 import torch
 from multiprocessing import freeze_support
@@ -6,7 +5,6 @@ from multiprocessing import freeze_support
 
 def main():
 
-    # YOLOv8s — более точная модель чем yolov8n
     model = YOLO("yolov8s.pt")
 
     results = model.train(
@@ -17,7 +15,7 @@ def main():
         # параметры обучения
         epochs=100,
         imgsz=640,
-        batch=16,      # 16 быстрее на большом датасете, RTX 4060 справится
+        batch=16,
 
         # GPU
         device=0 if torch.cuda.is_available() else "cpu",
@@ -27,11 +25,11 @@ def main():
         lr0=0.001,
 
         # загрузка данных
-        workers=4,     # 4 воркера для 26k изображений
+        workers=4,
         cache=False,
 
         # early stopping
-        patience=15,   # увеличили до 15 — датасет большой, нужно терпеливее
+        patience=15,
 
         # сохранение
         project="road_defects",
